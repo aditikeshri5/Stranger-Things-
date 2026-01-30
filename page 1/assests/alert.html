@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Upside Down Alert</title>
+
+  <style>
+    @font-face {
+      font-family: Stranger;
+      src: url("stranger.ttf");
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Stranger;
+    }
+
+    body {
+      background: black;
+      color: red;
+      min-height: 100vh;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    /* TOP ALERT BAR */
+    .alert-header {
+      width: 100%;
+      padding: 15px;
+      border-bottom: 2px solid red;
+      font-size: 18px;
+      letter-spacing: 2px;
+      box-shadow: 0 0 20px red;
+    }
+
+    /* MAIN TITLE */
+    .alert-title {
+      margin-top: 60px;
+      font-size: 80px;
+      text-shadow: 0 0 40px red;
+    }
+
+    .alert-sub {
+      font-size: 34px;
+      margin-bottom: 50px;
+      letter-spacing: 3px;
+    }
+
+    /* SURVIVAL STATUS BOX */
+    .alert-box {
+      width: 65%;
+      margin: auto;
+      border: 2px solid red;
+      padding: 30px;
+      box-shadow: 0 0 30px red;
+    }
+
+    .status-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 25px;
+      flex-wrap: wrap;
+    }
+
+    .status-card {
+      width: 30%;
+      border: 1px solid red;
+      padding: 20px;
+      box-shadow: 0 0 20px red;
+      margin: 10px 0;
+    }
+
+    .status-card h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .status-card p {
+      font-size: 22px;
+    }
+
+    /* WARNING MESSAGE */
+    .warning {
+      margin-top: 25px;
+      padding: 15px;
+      border-left: 4px solid red;
+      text-align: left;
+      font-size: 16px;
+    }
+
+    /* AFFECTED LOCATIONS */
+    .locations {
+      width: 65%;
+      margin: 60px auto;
+      border: 2px solid red;
+      padding: 30px;
+      box-shadow: 0 0 30px red;
+    }
+
+    .locations h2 {
+      margin-bottom: 30px;
+      font-size: 32px;
+    }
+
+    .location-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px;
+      border-bottom: 1px solid red;
+      font-size: 18px;
+    }
+
+    .tag {
+      padding: 6px 14px;
+      border: 1px solid red;
+      box-shadow: 0 0 15px red;
+    }
+
+    /* EVACUATE BUTTON */
+    .evacuate-btn {
+      margin: 80px 0;
+      padding: 25px 60px;
+      font-size: 32px;
+      background: red;
+      border: none;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 0 40px red;
+      letter-spacing: 4px;
+    }
+
+    .evacuate-btn:hover {
+      box-shadow: 0 0 60px red;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP ALERT -->
+  <div class="alert-header">
+    ⚠ ALERT : DIMENSIONAL ANOMALY DETECTED ⚠
+  </div>
+
+  <!-- TITLE -->
+  <h1 class="alert-title">UPSIDE DOWN</h1>
+  <h2 class="alert-sub">BREACH DETECTED</h2>
+
+  <!-- STATUS -->
+  <div class="alert-box">
+    <div class="status-row">
+      <div class="status-card">
+        <h3>THREAT LEVEL</h3>
+        <p>CRITICAL</p>
+      </div>
+      <div class="status-card">
+        <h3>SAFETY STATUS</h3>
+        <p>UNSAFE</p>
+      </div>
+      <div class="status-card">
+        <h3>ACTION REQUIRED</h3>
+        <p>EVACUATE</p>
+      </div>
+    </div>
+
+    <div class="warning">
+      ⚠ IMMEDIATE EVACUATION PROTOCOL IN EFFECT.  
+      ALL PERSONNEL MUST LEAVE THE AREA.
+    </div>
+  </div>
+
+  <!-- AFFECTED LOCATIONS -->
+  <div class="locations">
+    <h2>AFFECTED LOCATIONS</h2>
+
+    <div class="location-item">
+      <span>HAWKINS NATIONAL LABORATORY</span>
+      <span class="tag">CRITICAL</span>
+    </div>
+
+    <div class="location-item">
+      <span>MIRKWOOD FOREST</span>
+      <span class="tag">COMPROMISED</span>
+    </div>
+
+    <div class="location-item">
+      <span>DOWNTOWN HAWKINS</span>
+      <span class="tag">EVACUATING</span>
+    </div>
+
+    <div class="location-item">
+      <span>HAWKINS HIGH SCHOOL</span>
+      <span class="tag">UNSAFE</span>
+    </div>
+
+    <div class="location-item">
+      <span>POWER STATION</span>
+      <span class="tag">OFFLINE</span>
+    </div>
+  </div>
+
+  <!-- EVACUATE -->
+  <button class="evacuate-btn">EVACUATE NOW</button>
+
+</body>
+</html>

@@ -1,0 +1,204 @@
+@font-face {
+  font-family: Stranger;
+  src: url("stranger.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Stranger;
+}
+
+body {
+  height: 100vh;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(40, 40, 40, 0.95),
+      rgba(10, 10, 10, 0.98)
+    ),
+    url("assets/bg.jpg") center/cover no-repeat;
+  overflow: hidden;
+}
+
+/* TOP LIGHTS */
+.top-lights {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 120px;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.top-lights img {
+  width: 100%;
+  animation: flicker 2.5s infinite;
+}
+
+@keyframes flicker {
+  0% { opacity: 1; }
+  30% { opacity: 0.7; }
+  60% { opacity: 1; }
+  100% { opacity: 0.85; }
+}
+
+/* HAWKINS SYMBOL */
+.hawkins {
+  position: absolute;
+  left: 40px;
+  top: 55%;
+  transform: translateY(-50%);
+  width: 150px;
+  opacity: 0.2;
+}
+
+/* CENTER FORM */
+.form-area {
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 6;
+}
+
+.form-area input {
+  width: 300px;
+  padding: 14px;
+  background: rgba(20, 40, 70, 0.95);
+  border: 2px solid #2da8ff;
+  color: #e6f2ff;
+  outline: none;
+  box-shadow: 0 0 12px rgba(45,168,255,0.7);
+}
+
+.form-area input::placeholder {
+  color: #bcdcff;
+}
+
+.form-area input:focus {
+  box-shadow: 0 0 18px rgba(45,168,255,1);
+  border-color: #7cc7ff;
+}
+
+/* RIGHT PANEL */
+.right-panel {
+  position: absolute;
+  top: 50%;
+  right: 4%;
+  transform: translateY(-50%);
+  text-align: center;
+  z-index: 6;
+}
+
+/* STRANGER THINGS TITLE */
+.st-title {
+  color: red;
+  font-size: 42px;
+  text-shadow: 0 0 15px red;
+  margin-bottom: 10px;
+}
+
+/* VECNA + FRONT CHARACTER */
+/* VECNA + STEVE SIDE BY SIDE */
+.vecna-layer {
+  display: flex;
+  align-items: flex-end;   /* feet aligned */
+  justify-content: center;
+  gap: 20px;               /* space between them */
+  margin-top: 10px;
+}
+
+/* Vecna */
+.vecna {
+  width: 220px;            /* thoda bada */
+  opacity: 0.9;
+  filter: drop-shadow(0 0 25px red);
+}
+
+/* Steve (front character) */
+.front-character {
+  width: 200px;            /* balanced size */
+  filter: drop-shadow(0 0 20px rgba(0,0,0,0.8));
+}
+
+/* BOTTOM IMAGE */
+.bottom-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  opacity: 0.6;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* BLEND GRADIENT ABOVE BOTTOM IMAGE */
+body::after {
+  content: "";
+  position: absolute;
+  bottom: 220px;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.9));
+  z-index: 2;
+}
+
+.login-btn {
+  margin-top: 20px;
+  padding: 14px;
+  width: 100%;
+  background: red;
+  border: none;
+  color: black;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 0 20px red;
+}
+
+.login-btn:hover {
+  box-shadow: 0 0 30px red;
+}
+.alert-section {
+  min-height: 100vh;
+  background: black;
+  color: red;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.alert-title {
+  font-size: 72px;
+  text-shadow: 0 0 30px red;
+}
+
+.alert-sub {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.alert-box {
+  border: 2px solid red;
+  padding: 30px;
+  width: 60%;
+  margin: auto;
+  box-shadow: 0 0 25px red;
+}
+
+.evacuate-btn {
+  margin-top: 40px;
+  padding: 20px 40px;
+  font-size: 26px;
+  background: red;
+  border: none;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 30px red;
+}
